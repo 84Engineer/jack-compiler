@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4deea75-291f-4b77-93a3-a10b0bff170d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YTjYsQXNKCFzNXCeB6jgCEBkXG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="JackAnalyzer" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JackAnalyzer" />
+      <module name="jack-compiler" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Documents/Coursuera/nand2tetris/projects/10/ArrayTest/Main.jack" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4deea75-291f-4b77-93a3-a10b0bff170d" name="Default Changelist" comment="" />
+      <created>1582973528358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582973528358</updated>
+      <workItem from="1582973538452" duration="20097000" />
+      <workItem from="1583097589521" duration="4645000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="373" y="53" width="676" height="687" key="#JackAnalyzer" timestamp="1582984548131">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="373" y="53" width="676" height="687" key="#JackAnalyzer/67.27.1299.741@67.27.1299.741" timestamp="1582984548131" />
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583101793612">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1583101793612" />
+    <state x="414" y="201" width="595" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582982443554">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="414" y="201" width="595" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741@67.27.1299.741" timestamp="1582982443554" />
+    <state x="474" y="49" key="#xdebugger.evaluate" timestamp="1583100103401">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="474" y="49" key="#xdebugger.evaluate/67.27.1299.741@67.27.1299.741" timestamp="1583100103401" />
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583101788291">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1583101788291" />
+    <state width="1253" height="220" key="GridCell.Tab.0.bottom" timestamp="1583102266620">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="220" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583102266620" />
+    <state width="1253" height="220" key="GridCell.Tab.0.center" timestamp="1583102266620">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="220" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583102266620" />
+    <state width="1253" height="220" key="GridCell.Tab.0.left" timestamp="1583102266619">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="220" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583102266619" />
+    <state width="1253" height="220" key="GridCell.Tab.0.right" timestamp="1583102266620">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="220" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583102266620" />
+    <state width="1253" height="260" key="GridCell.Tab.1.bottom" timestamp="1583101797985">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="260" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583101797985" />
+    <state width="1253" height="260" key="GridCell.Tab.1.center" timestamp="1583101797984">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="260" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1583101797984" />
+    <state width="1253" height="260" key="GridCell.Tab.1.left" timestamp="1583101797984">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="260" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1583101797984" />
+    <state width="1253" height="260" key="GridCell.Tab.1.right" timestamp="1583101797984">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="260" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1583101797984" />
+    <state x="380" y="175" key="run.anything.popup" timestamp="1583006514076">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="380" y="175" key="run.anything.popup/67.27.1299.741@67.27.1299.741" timestamp="1583006514076" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1583100767049">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741@67.27.1299.741" timestamp="1583100767049" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
