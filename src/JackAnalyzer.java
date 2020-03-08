@@ -1,3 +1,5 @@
+import org.w3c.dom.Document;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -15,7 +17,9 @@ public class JackAnalyzer {
             List<String> sourceCode = fileUtil.readAllLines(filePath);
 
             Tokenizer tokenizer = new Tokenizer(sourceCode, filePath);
-            tokenizer.process();
+            Document tokens = tokenizer.process();
+
+            JackTokenizer jackTokenizer = new JackTokenizer(tokens);
 
         }
 

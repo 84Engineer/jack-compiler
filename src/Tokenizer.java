@@ -1,17 +1,19 @@
-import java.io.FileNotFoundException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Properties;
-import javax.xml.parsers.*;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.*;
-
-import org.xml.sax.*;
-import org.w3c.dom.*;
 
 
 public class Tokenizer {
@@ -32,7 +34,7 @@ public class Tokenizer {
         this.filePath = parts[0] + ".tokens.xml";
     }
 
-    public void process() {
+    public Document process() {
 
         String source = compileString();
 
@@ -100,6 +102,8 @@ public class Tokenizer {
                 tr.transform(new DOMSource(dom),
                         new StreamResult(new FileOutputStream(filePath)));
 
+                return dom;
+
             } catch (TransformerException te) {
                 System.out.println(te.getMessage());
             } catch (IOException ioe) {
@@ -108,6 +112,7 @@ public class Tokenizer {
         } catch (ParserConfigurationException pce) {
             System.out.println("UsersXML: Error trying to instantiate DocumentBuilder " + pce);
         }
+        return null;
     }
 
     private boolean checkSymbol(char c) {
