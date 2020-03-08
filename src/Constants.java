@@ -8,6 +8,6 @@ public class Constants {
             "char", "boolean", "void", "true", "false", "null", "this", "let", "do", "if", "else", "while", "return");
 
     public static final List<Character> SYMBOLS = Arrays.asList('{', '}', '(', ')', '[', ']', '.', ',', ';',
-            '+', '-', '*', '/', '&', '|', '<', '>', '=');
+            '+', '-', '*', '/', '&', '|', '<', '>', '=', '~');
 
 }

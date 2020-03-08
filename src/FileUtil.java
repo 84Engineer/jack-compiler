@@ -36,7 +36,7 @@ public class FileUtil {
         if (Files.isDirectory(path)) {
             return Stream.of(Objects.requireNonNull(path.toFile().listFiles()))
                     .map(File::getAbsolutePath)
-                    .filter(f -> f.endsWith(".vm"))
+                    .filter(f -> f.endsWith(".jack"))
                     .collect(Collectors.toList());
 
         }
