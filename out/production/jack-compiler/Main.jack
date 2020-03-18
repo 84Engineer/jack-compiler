@@ -7,9 +7,13 @@
 
 /** Computes the average of a sequence of integers. */
 class Main {
-    function void main() {
-        var i;
-	    let i = 0;
-	    return;
+    field int counter;
+    static Array arr;
+    field boolean bol;
+
+    function void main(int a, Array ar, boolean flag) {
+//        var i;
+//	    let i = 0;
+//	    return;
     }
 }

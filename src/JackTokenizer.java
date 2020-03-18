@@ -23,6 +23,14 @@ public class JackTokenizer {
         return currentToken + 1 < length;
     }
 
+    public int getLength() {
+        return length;
+    }
+
+    public int getCurrentLength() {
+        return currentToken;
+    }
+
     public void advance() {
         currentToken++;
     }

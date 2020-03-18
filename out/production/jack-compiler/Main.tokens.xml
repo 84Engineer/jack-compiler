@@ -2,22 +2,29 @@
     <keyword>class</keyword>
     <identifier>Main</identifier>
     <symbol>{</symbol>
+    <keyword>field</keyword>
+    <keyword>int</keyword>
+    <identifier>counter</identifier>
+    <symbol>;</symbol>
+    <keyword>static</keyword>
+    <identifier>Array</identifier>
+    <identifier>arr</identifier>
+    <symbol>;</symbol>
+    <keyword>field</keyword>
+    <keyword>boolean</keyword>
+    <identifier>bol</identifier>
+    <symbol>;</symbol>
     <keyword>function</keyword>
     <keyword>void</keyword>
     <identifier>main</identifier>
     <symbol>(</symbol>
+    <keyword>int</keyword>
+    <identifier>a</identifier>
+    <symbol>,</symbol>
+    <identifier>Array</identifier>
+    <identifier>ar</identifier>
     <symbol>)</symbol>
     <symbol>{</symbol>
-    <keyword>var</keyword>
-    <identifier>i</identifier>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>i</identifier>
-    <symbol>=</symbol>
-    <integerConstant>0</integerConstant>
-    <symbol>;</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
     <symbol>}</symbol>
     <symbol>}</symbol>
 </tokens>

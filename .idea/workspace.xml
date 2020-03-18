@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4deea75-291f-4b77-93a3-a10b0bff170d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CompileEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JackTokenizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/JackAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/JackAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Tokenizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.jack" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Main.jack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.tokens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Main.tokens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompileEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JackAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JackAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tokenizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JackTokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JackTokenizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.jack" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.jack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.tokens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.tokens.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,7 @@
     <configuration name="JackAnalyzer" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JackAnalyzer" />
       <module name="jack-compiler" />
-      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Documents/Coursuera/nand2tetris/projects/10/ExpressionLessSquare" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/src/Main.jack" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,7 +73,12 @@
       <workItem from="1582973538452" duration="20097000" />
       <workItem from="1583097589521" duration="5191000" />
       <workItem from="1583256128959" duration="111000" />
-      <workItem from="1583679832597" duration="7359000" />
+      <workItem from="1583679832597" duration="7437000" />
+      <workItem from="1584219165141" duration="4117000" />
+      <workItem from="1584276311674" duration="12659000" />
+      <workItem from="1584395547646" duration="600000" />
+      <workItem from="1584472181013" duration="1200000" />
+      <workItem from="1584546791086" duration="10717000" />
     </task>
     <servers />
   </component>
@@ -81,10 +90,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="373" y="53" width="676" height="687" key="#JackAnalyzer/67.27.1299.741@67.27.1299.741" timestamp="1582984548131" />
-    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583690489484">
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584295216274">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1583690489484" />
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1584295216274" />
     <state x="414" y="201" width="595" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582982443554">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -93,50 +102,54 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="524" y="115" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1583707574864" />
-    <state x="474" y="49" key="#xdebugger.evaluate" timestamp="1583700425248">
+    <state x="474" y="49" key="#xdebugger.evaluate" timestamp="1584551787934">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="474" y="49" key="#xdebugger.evaluate/67.27.1299.741@67.27.1299.741" timestamp="1583700425248" />
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583101788291">
+    <state x="474" y="49" key="#xdebugger.evaluate/67.27.1299.741@67.27.1299.741" timestamp="1584551787934" />
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584219958266">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1583101788291" />
-    <state width="1253" height="151" key="GridCell.Tab.0.bottom" timestamp="1583700358061">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1584219958266" />
+    <state width="1253" height="207" key="GridCell.Tab.0.bottom" timestamp="1584563905120">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583700358061" />
-    <state width="1253" height="151" key="GridCell.Tab.0.center" timestamp="1583700358060">
+    <state width="1253" height="207" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584563905120" />
+    <state width="1253" height="207" key="GridCell.Tab.0.center" timestamp="1584563905119">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583700358060" />
-    <state width="1253" height="151" key="GridCell.Tab.0.left" timestamp="1583700358060">
+    <state width="1253" height="207" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584563905119" />
+    <state width="1253" height="207" key="GridCell.Tab.0.left" timestamp="1584563905118">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583700358060" />
-    <state width="1253" height="151" key="GridCell.Tab.0.right" timestamp="1583700358061">
+    <state width="1253" height="207" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584563905118" />
+    <state width="1253" height="207" key="GridCell.Tab.0.right" timestamp="1584563905119">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583700358061" />
-    <state width="1253" height="151" key="GridCell.Tab.1.bottom" timestamp="1583700358666">
+    <state width="1253" height="207" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584563905119" />
+    <state width="1253" height="258" key="GridCell.Tab.1.bottom" timestamp="1584554503179">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583700358666" />
-    <state width="1253" height="151" key="GridCell.Tab.1.center" timestamp="1583700358665">
+    <state width="1253" height="258" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584554503179" />
+    <state width="1253" height="258" key="GridCell.Tab.1.center" timestamp="1584554503179">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1583700358665" />
-    <state width="1253" height="151" key="GridCell.Tab.1.left" timestamp="1583700358664">
+    <state width="1253" height="258" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1584554503179" />
+    <state width="1253" height="258" key="GridCell.Tab.1.left" timestamp="1584554503178">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1583700358664" />
-    <state width="1253" height="151" key="GridCell.Tab.1.right" timestamp="1583700358665">
+    <state width="1253" height="258" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1584554503178" />
+    <state width="1253" height="258" key="GridCell.Tab.1.right" timestamp="1584554503179">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="151" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1583700358665" />
-    <state x="251" y="84" width="921" height="624" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583697224403">
+    <state width="1253" height="258" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1584554503179" />
+    <state x="251" y="84" width="921" height="624" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1584553776938">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="251" y="84" width="921" height="624" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1299.741@67.27.1299.741" timestamp="1583697224403" />
+    <state x="251" y="84" width="921" height="624" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1299.741@67.27.1299.741" timestamp="1584553776938" />
+    <state x="361" y="108" width="710" height="576" key="find.popup" timestamp="1584293192608">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="361" y="108" width="710" height="576" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1584293192608" />
     <state x="380" y="175" key="run.anything.popup" timestamp="1583006514076">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -178,6 +191,23 @@
           <url>file://$PROJECT_DIR$/src/Tokenizer.java</url>
           <line>122</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <condition expression="jackTokenizer.getValue().equals(&quot;static&quot;)" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
+          <line>238</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <condition expression="jackTokenizer.getValue().equals(&quot;static&quot;)" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

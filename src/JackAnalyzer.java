@@ -20,6 +20,9 @@ public class JackAnalyzer {
             Document tokens = tokenizer.process();
 
             JackTokenizer jackTokenizer = new JackTokenizer(tokens);
+            CompileEngine compileEngine = new CompileEngine(jackTokenizer, filePath);
+
+            compileEngine.compile();
 
         }
 
