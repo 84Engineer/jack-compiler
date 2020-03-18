@@ -28,6 +28,12 @@
     <identifier>flag</identifier>
     <symbol>)</symbol>
     <symbol>{</symbol>
+    <keyword>var</keyword>
+    <identifier>i</identifier>
+    <symbol>;</symbol>
+    <keyword>return</keyword>
+    <identifier>i</identifier>
+    <symbol>;</symbol>
     <symbol>}</symbol>
     <symbol>}</symbol>
 </tokens>

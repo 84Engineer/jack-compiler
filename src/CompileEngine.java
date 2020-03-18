@@ -90,7 +90,7 @@ public class CompileEngine {
 //                            compileWhile(parent);
                             break;
                         case "return":
-//                            compileReturn(parent);
+                            compileReturn(parent);
                             break;
                         case "if":
 //                            compileIf(parent);
@@ -164,7 +164,11 @@ public class CompileEngine {
 
         eat(bodyTag, JackTokenizer.TokenType.SYMBOL, "{");
 
-        // TODO all the staff
+        while (!jackTokenizer.stringVal().equals("return")) {
+            proceedNextTokens(bodyTag);
+        }
+
+        compileReturn(bodyTag);
 
         eat(bodyTag, JackTokenizer.TokenType.SYMBOL, "}");
 
@@ -194,7 +198,15 @@ public class CompileEngine {
 
     }
 
-    private void compileReturn() {
+    private void compileReturn(Element parent) {
+        Element returnStatement = eat(parent, "returnStatement");
+        eat(returnStatement, JackTokenizer.TokenType.KEYWORD, "return");
+        try {
+            eat(returnStatement, JackTokenizer.TokenType.IDENTIFIER, null);
+        } catch (Exception e) {
+            // no return value
+        }
+        eat(returnStatement, JackTokenizer.TokenType.SYMBOL, ";");
     }
 
     private void compileWhile() {

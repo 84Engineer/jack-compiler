@@ -31,10 +31,22 @@
             <symbol>,</symbol>
             <identifier>Array</identifier>
             <identifier>ar</identifier>
+            <symbol>,</symbol>
+            <keyword>boolean</keyword>
+            <identifier>flag</identifier>
         </parameterList>
         <symbol>)</symbol>
         <subroutineBody>
             <symbol>{</symbol>
+            <varDec>
+                <keyword>var</keyword>
+                <identifier>i</identifier>
+                <symbol>;</symbol>
+            </varDec>
+            <returnStatement>
+                <keyword>return</keyword>
+                <symbol>;</symbol>
+            </returnStatement>
             <symbol>}</symbol>
         </subroutineBody>
     </subroutineDec>

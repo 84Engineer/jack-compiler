@@ -38,6 +38,16 @@
         <symbol>)</symbol>
         <subroutineBody>
             <symbol>{</symbol>
+            <varDec>
+                <keyword>var</keyword>
+                <identifier>i</identifier>
+                <symbol>;</symbol>
+            </varDec>
+            <returnStatement>
+                <keyword>return</keyword>
+                <identifier>i</identifier>
+                <symbol>;</symbol>
+            </returnStatement>
             <symbol>}</symbol>
         </subroutineBody>
     </subroutineDec>

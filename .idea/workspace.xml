@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4deea75-291f-4b77-93a3-a10b0bff170d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/JackAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/JackAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.jack" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Main.jack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.tokens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Main.tokens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CompileEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JackAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JackAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JackTokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JackTokenizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.jack" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.jack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.tokens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.tokens.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +70,7 @@
       <workItem from="1584276311674" duration="12659000" />
       <workItem from="1584395547646" duration="600000" />
       <workItem from="1584472181013" duration="1200000" />
-      <workItem from="1584546791086" duration="10717000" />
+      <workItem from="1584546791086" duration="11596000" />
     </task>
     <servers />
   </component>
@@ -110,22 +102,22 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1584219958266" />
-    <state width="1253" height="207" key="GridCell.Tab.0.bottom" timestamp="1584563905120">
+    <state width="1253" height="207" key="GridCell.Tab.0.bottom" timestamp="1584565206897">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="207" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584563905120" />
-    <state width="1253" height="207" key="GridCell.Tab.0.center" timestamp="1584563905119">
+    <state width="1253" height="207" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584565206897" />
+    <state width="1253" height="207" key="GridCell.Tab.0.center" timestamp="1584565206896">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="207" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584563905119" />
-    <state width="1253" height="207" key="GridCell.Tab.0.left" timestamp="1584563905118">
+    <state width="1253" height="207" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584565206896" />
+    <state width="1253" height="207" key="GridCell.Tab.0.left" timestamp="1584565206896">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="207" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584563905118" />
-    <state width="1253" height="207" key="GridCell.Tab.0.right" timestamp="1584563905119">
+    <state width="1253" height="207" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584565206896" />
+    <state width="1253" height="207" key="GridCell.Tab.0.right" timestamp="1584565206897">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="207" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584563905119" />
+    <state width="1253" height="207" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584565206897" />
     <state width="1253" height="258" key="GridCell.Tab.1.bottom" timestamp="1584554503179">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -200,7 +192,7 @@
         <line-breakpoint type="java-line">
           <condition expression="jackTokenizer.getValue().equals(&quot;static&quot;)" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
-          <line>238</line>
+          <line>250</line>
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
