@@ -4,7 +4,11 @@
     <symbol>{</symbol>
     <keyword>field</keyword>
     <keyword>int</keyword>
-    <identifier>counter</identifier>
+    <identifier>x</identifier>
+    <symbol>,</symbol>
+    <identifier>y</identifier>
+    <symbol>,</symbol>
+    <identifier>z</identifier>
     <symbol>;</symbol>
     <keyword>static</keyword>
     <identifier>Array</identifier>
@@ -14,6 +18,64 @@
     <keyword>boolean</keyword>
     <identifier>bol</identifier>
     <symbol>;</symbol>
+    <keyword>constructor</keyword>
+    <identifier>Main</identifier>
+    <identifier>new</identifier>
+    <symbol>(</symbol>
+    <keyword>int</keyword>
+    <identifier>Ax</identifier>
+    <symbol>,</symbol>
+    <keyword>int</keyword>
+    <identifier>Ay</identifier>
+    <symbol>,</symbol>
+    <keyword>int</keyword>
+    <identifier>Asize</identifier>
+    <symbol>)</symbol>
+    <symbol>{</symbol>
+    <keyword>var</keyword>
+    <identifier>String</identifier>
+    <identifier>str</identifier>
+    <symbol>;</symbol>
+    <keyword>var</keyword>
+    <keyword>int</keyword>
+    <identifier>ii</identifier>
+    <symbol>;</symbol>
+    <keyword>let</keyword>
+    <identifier>ii</identifier>
+    <symbol>=</symbol>
+    <integerConstant>100</integerConstant>
+    <symbol>;</symbol>
+    <keyword>let</keyword>
+    <identifier>x</identifier>
+    <symbol>=</symbol>
+    <identifier>Ax</identifier>
+    <symbol>;</symbol>
+    <keyword>let</keyword>
+    <identifier>y</identifier>
+    <symbol>=</symbol>
+    <identifier>Ay</identifier>
+    <symbol>;</symbol>
+    <keyword>let</keyword>
+    <identifier>z</identifier>
+    <symbol>=</symbol>
+    <identifier>x</identifier>
+    <symbol>+</symbol>
+    <identifier>y</identifier>
+    <symbol>;</symbol>
+    <keyword>let</keyword>
+    <identifier>bol</identifier>
+    <symbol>=</symbol>
+    <keyword>true</keyword>
+    <symbol>;</symbol>
+    <keyword>let</keyword>
+    <identifier>str</identifier>
+    <symbol>=</symbol>
+    <stringConstant>Hello!</stringConstant>
+    <symbol>;</symbol>
+    <keyword>return</keyword>
+    <keyword>this</keyword>
+    <symbol>;</symbol>
+    <symbol>}</symbol>
     <keyword>function</keyword>
     <keyword>void</keyword>
     <identifier>main</identifier>
@@ -29,9 +91,17 @@
     <symbol>)</symbol>
     <symbol>{</symbol>
     <keyword>var</keyword>
+    <keyword>char</keyword>
     <identifier>i</identifier>
     <symbol>;</symbol>
+    <keyword>var</keyword>
+    <identifier>Array</identifier>
+    <identifier>v1</identifier>
+    <symbol>,</symbol>
+    <identifier>v2</identifier>
+    <symbol>;</symbol>
     <keyword>return</keyword>
+    <identifier>i</identifier>
     <symbol>;</symbol>
     <symbol>}</symbol>
     <symbol>}</symbol>

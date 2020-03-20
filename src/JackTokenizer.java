@@ -9,7 +9,7 @@ public class JackTokenizer {
     private int length;
 
     public enum TokenType {
-        KEYWORD, SYMBOL, IDENTIFIER, INT_CONST, STRING_CONST
+        KEYWORD, SYMBOL, IDENTIFIER, INTEGERCONSTANT, STRINGCONSTANT
     }
 
     public JackTokenizer(Document source) {

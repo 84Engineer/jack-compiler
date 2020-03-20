@@ -84,7 +84,7 @@ public class CompileEngine {
 //                            compileDo(parent);
                             break;
                         case "let":
-//                            compileLet(parent);
+                            compileLet(parent);
                             break;
                         case "while":
 //                            compileWhile(parent);
@@ -95,16 +95,27 @@ public class CompileEngine {
                         case "if":
 //                            compileIf(parent);
                             break;
+                        case "this":
+                            compileThis(parent);
+                            break;
+                        case "true":
+                        case "false":
+                            compileBoolean(parent);
+
 
                     }
                     break;
                 case SYMBOL:
+                    compileSymbol(parent);
                     break;
                 case IDENTIFIER:
+                    compileIdentifier(parent);
                     break;
-                case INT_CONST:
+                case INTEGERCONSTANT:
+                    compileIntConstant(parent);
                     break;
-                case STRING_CONST:
+                case STRINGCONSTANT:
+                    compileStringConst(parent);
                     break;
             }
 
@@ -115,6 +126,34 @@ public class CompileEngine {
 //        }
     }
 
+    private void compileBoolean(Element parent) {
+        Element term = eat(parent, "term");
+        eat(term, JackTokenizer.TokenType.KEYWORD, null);
+    }
+
+    private void compileStringConst(Element parent) {
+        Element term = eat(parent, "term");
+        eat(term, JackTokenizer.TokenType.STRINGCONSTANT, null);
+    }
+
+    private void compileIntConstant(Element parent) {
+        Element term = eat(parent, "term");
+        eat(term, JackTokenizer.TokenType.INTEGERCONSTANT, null);
+    }
+
+    private void compileIdentifier(Element parent) {
+        Element term = eat(parent, "term");
+        eat(term, JackTokenizer.TokenType.IDENTIFIER, null);
+    }
+
+    private void compileThis(Element parent) {
+        Element term = eat(parent, "term");
+        eat(term, JackTokenizer.TokenType.KEYWORD, "this");
+    }
+
+    private void compileSymbol(Element parent) {
+        eat(parent, JackTokenizer.TokenType.SYMBOL, null);
+    }
 
     private void compileClass(Element clazz) {
         eat(clazz, JackTokenizer.TokenType.KEYWORD, "class");
@@ -130,6 +169,7 @@ public class CompileEngine {
 
     private Element compileClassVarDec(Element parent) {
         Element parentTag = eat(parent, "classVarDec");
+//        parent.appendChild(parentTag);
         eat(parentTag, JackTokenizer.TokenType.KEYWORD, null);
         try {
             eat(parentTag, JackTokenizer.TokenType.KEYWORD, null);
@@ -137,11 +177,22 @@ public class CompileEngine {
             // If not keyword, then identifier
             eat(parentTag, JackTokenizer.TokenType.IDENTIFIER, null);
         }
-//        eat(parentTag, JackTokenizer.TokenType.KEYWORD, null);
-        eat(parentTag, JackTokenizer.TokenType.IDENTIFIER, null);
-        eat(parentTag, JackTokenizer.TokenType.SYMBOL, ";");
-        parent.appendChild(parentTag);
+        compileVars(parentTag);
+////        eat(parentTag, JackTokenizer.TokenType.KEYWORD, null);
+//        eat(parentTag, JackTokenizer.TokenType.IDENTIFIER, null);
+//        eat(parentTag, JackTokenizer.TokenType.SYMBOL, ";");
         return parentTag;
+    }
+
+    private void compileVars(Element parentTag) {
+        eat(parentTag, JackTokenizer.TokenType.IDENTIFIER, null);
+        try {
+            eat(parentTag, JackTokenizer.TokenType.SYMBOL, ";");
+            return;
+        } catch (Exception e) {
+            eat(parentTag, JackTokenizer.TokenType.SYMBOL, ",");
+            compileVars(parentTag);
+        }
     }
 
     private void compileSubroutine(Element parent) {
@@ -164,11 +215,13 @@ public class CompileEngine {
 
         eat(bodyTag, JackTokenizer.TokenType.SYMBOL, "{");
 
+        Element statements = eat(bodyTag, "statements");
+
         while (!jackTokenizer.stringVal().equals("return")) {
-            proceedNextTokens(bodyTag);
+            proceedNextTokens(statements);
         }
 
-        compileReturn(bodyTag);
+        compileReturn(statements);
 
         eat(bodyTag, JackTokenizer.TokenType.SYMBOL, "}");
 
@@ -198,13 +251,25 @@ public class CompileEngine {
 
     }
 
+    private void compileExpression(Element parent, String endsWith) {
+        Element expression = eat(parent, "expression");
+        while(!jackTokenizer.stringVal().equals(endsWith)) {
+            proceedNextTokens(expression);
+        }
+
+    }
+
     private void compileReturn(Element parent) {
         Element returnStatement = eat(parent, "returnStatement");
         eat(returnStatement, JackTokenizer.TokenType.KEYWORD, "return");
         try {
-            eat(returnStatement, JackTokenizer.TokenType.IDENTIFIER, null);
-        } catch (Exception e) {
+//            eat(returnStatement, JackTokenizer.TokenType.IDENTIFIER, null);
             // no return value
+            eat(returnStatement, JackTokenizer.TokenType.SYMBOL, ";");
+            return;
+        } catch (Exception e) {
+            // has return value
+            compileExpression(returnStatement, ";");
         }
         eat(returnStatement, JackTokenizer.TokenType.SYMBOL, ";");
     }
@@ -213,7 +278,12 @@ public class CompileEngine {
 
     }
 
-    private void compileLet() {
+    private void compileLet(Element parent) {
+        Element letStatement = eat(parent, "letStatement");
+        eat(letStatement, JackTokenizer.TokenType.KEYWORD, "let");
+        eat(letStatement, JackTokenizer.TokenType.IDENTIFIER, null);
+        eat(letStatement, JackTokenizer.TokenType.SYMBOL, "=");
+        compileExpression(letStatement, ";");
     }
 
     private void compileDo() {
@@ -229,7 +299,14 @@ public class CompileEngine {
             // If not keyword, then identifier
             eat(varDec, JackTokenizer.TokenType.IDENTIFIER, null);
         }
-        eat(varDec, JackTokenizer.TokenType.SYMBOL, ";");
+//        try {
+//            eat(varDec, JackTokenizer.TokenType.KEYWORD, null);
+//        } catch (Exception e) {
+//            // If not keyword, then identifier
+//            eat(varDec, JackTokenizer.TokenType.IDENTIFIER, null);
+//        }
+//        eat(varDec, JackTokenizer.TokenType.SYMBOL, ";");
+        compileVars(varDec);
     }
 
 
