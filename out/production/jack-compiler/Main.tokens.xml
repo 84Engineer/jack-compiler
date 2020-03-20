@@ -32,45 +32,15 @@
     <identifier>Asize</identifier>
     <symbol>)</symbol>
     <symbol>{</symbol>
-    <keyword>var</keyword>
-    <identifier>String</identifier>
-    <identifier>str</identifier>
-    <symbol>;</symbol>
-    <keyword>var</keyword>
-    <keyword>int</keyword>
-    <identifier>ii</identifier>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>ii</identifier>
-    <symbol>=</symbol>
-    <integerConstant>100</integerConstant>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>x</identifier>
-    <symbol>=</symbol>
-    <identifier>Ax</identifier>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>y</identifier>
-    <symbol>=</symbol>
-    <identifier>Ay</identifier>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>z</identifier>
-    <symbol>=</symbol>
-    <identifier>x</identifier>
-    <symbol>+</symbol>
-    <identifier>y</identifier>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>bol</identifier>
-    <symbol>=</symbol>
-    <keyword>true</keyword>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>str</identifier>
-    <symbol>=</symbol>
-    <stringConstant>Hello!</stringConstant>
+    <keyword>do</keyword>
+    <identifier>someType</identifier>
+    <symbol>.</symbol>
+    <identifier>draw</identifier>
+    <symbol>(</symbol>
+    <identifier>a</identifier>
+    <symbol>,</symbol>
+    <identifier>b</identifier>
+    <symbol>)</symbol>
     <symbol>;</symbol>
     <keyword>return</keyword>
     <keyword>this</keyword>
@@ -100,8 +70,73 @@
     <symbol>,</symbol>
     <identifier>v2</identifier>
     <symbol>;</symbol>
-    <keyword>return</keyword>
+    <keyword>let</keyword>
     <identifier>i</identifier>
+    <symbol>=</symbol>
+    <integerConstant>0</integerConstant>
+    <symbol>;</symbol>
+    <keyword>return</keyword>
+    <symbol>;</symbol>
+    <symbol>}</symbol>
+    <keyword>method</keyword>
+    <keyword>char</keyword>
+    <identifier>m1</identifier>
+    <symbol>(</symbol>
+    <symbol>)</symbol>
+    <symbol>{</symbol>
+    <keyword>while</keyword>
+    <symbol>(</symbol>
+    <identifier>x</identifier>
+    <symbol>&gt;</symbol>
+    <integerConstant>1</integerConstant>
+    <symbol>)</symbol>
+    <symbol>{</symbol>
+    <keyword>let</keyword>
+    <identifier>y</identifier>
+    <symbol>=</symbol>
+    <identifier>y</identifier>
+    <symbol>+</symbol>
+    <integerConstant>1</integerConstant>
+    <symbol>;</symbol>
+    <symbol>}</symbol>
+    <keyword>return</keyword>
+    <stringConstant>a</stringConstant>
+    <symbol>;</symbol>
+    <symbol>}</symbol>
+    <keyword>method</keyword>
+    <keyword>void</keyword>
+    <identifier>m2</identifier>
+    <symbol>(</symbol>
+    <symbol>)</symbol>
+    <symbol>{</symbol>
+    <keyword>if</keyword>
+    <symbol>(</symbol>
+    <symbol>(</symbol>
+    <identifier>a</identifier>
+    <symbol>+</symbol>
+    <identifier>x</identifier>
+    <symbol>)</symbol>
+    <symbol>&gt;</symbol>
+    <integerConstant>1</integerConstant>
+    <symbol>)</symbol>
+    <symbol>{</symbol>
+    <keyword>let</keyword>
+    <identifier>y</identifier>
+    <symbol>=</symbol>
+    <identifier>y</identifier>
+    <symbol>+</symbol>
+    <integerConstant>1</integerConstant>
+    <symbol>;</symbol>
+    <symbol>}</symbol>
+    <keyword>else</keyword>
+    <symbol>{</symbol>
+    <keyword>let</keyword>
+    <identifier>a</identifier>
+    <symbol>=</symbol>
+    <stringConstant>hi there</stringConstant>
+    <symbol>;</symbol>
+    <symbol>}</symbol>
+    <keyword>return</keyword>
     <symbol>;</symbol>
     <symbol>}</symbol>
     <symbol>}</symbol>

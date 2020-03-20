@@ -12,6 +12,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class CompileEngine {
 
@@ -81,19 +82,19 @@ public class CompileEngine {
                             compileVarDec(parent);
                             break;
                         case "do":
-//                            compileDo(parent);
+                            compileDo(parent);
                             break;
                         case "let":
                             compileLet(parent);
                             break;
                         case "while":
-//                            compileWhile(parent);
+                            compileWhile(parent);
                             break;
                         case "return":
                             compileReturn(parent);
                             break;
                         case "if":
-//                            compileIf(parent);
+                            compileIf(parent);
                             break;
                         case "this":
                             compileThis(parent);
@@ -247,16 +248,57 @@ public class CompileEngine {
 
 
 
-    private void compileIf() {
+    private void compileIf(Element parent) {
+        Element ifStatement = eat(parent, "ifStatement");
+        eat(ifStatement, JackTokenizer.TokenType.KEYWORD, "if");
+        eat(ifStatement, JackTokenizer.TokenType.SYMBOL, "(");
+
+        compileExpression(ifStatement, ")");
+
+        eat(ifStatement, JackTokenizer.TokenType.SYMBOL, ")");
+
+        eat(ifStatement, JackTokenizer.TokenType.SYMBOL, "{");
+
+        Element statements = eat(ifStatement, "statements");
+
+        while(!jackTokenizer.stringVal().equals("}")) {
+            proceedNextTokens(statements);
+        }
+
+        eat(ifStatement, JackTokenizer.TokenType.SYMBOL, "}");
+
+        try {
+            eat(ifStatement, JackTokenizer.TokenType.KEYWORD, "else");
+            eat(ifStatement, JackTokenizer.TokenType.SYMBOL, "{");
+
+            Element elseStatements = eat(ifStatement, "statements");
+
+            while(!jackTokenizer.stringVal().equals("}")) {
+                proceedNextTokens(elseStatements);
+            }
+
+            eat(ifStatement, JackTokenizer.TokenType.SYMBOL, "}");
+
+        } catch (Exception e) {
+            //no else
+        }
+
 
     }
 
-    private void compileExpression(Element parent, String endsWith) {
+    private void compileExpression(Element parent, String... endsWith0) {
         Element expression = eat(parent, "expression");
-        while(!jackTokenizer.stringVal().equals(endsWith)) {
+        int parenthesesCount = 0;
+        String value = jackTokenizer.stringVal();
+        while (!Arrays.asList(endsWith0).contains(value)
+                || (value.equals("}") && Arrays.asList(endsWith0).contains(value) && parenthesesCount > 0)) {
+            if (value.equals("(")) {
+                parenthesesCount++;
+            } else if (value.equals(")") && parenthesesCount > 0) {
+                parenthesesCount--;
+            }
             proceedNextTokens(expression);
         }
-
     }
 
     private void compileReturn(Element parent) {
@@ -274,7 +316,24 @@ public class CompileEngine {
         eat(returnStatement, JackTokenizer.TokenType.SYMBOL, ";");
     }
 
-    private void compileWhile() {
+    private void compileWhile(Element parent) {
+        Element whileStatement = eat(parent, "whileStatement");
+        eat(whileStatement, JackTokenizer.TokenType.KEYWORD, "while");
+        eat(whileStatement, JackTokenizer.TokenType.SYMBOL, "(");
+
+        compileExpression(whileStatement, ")");
+
+        eat(whileStatement, JackTokenizer.TokenType.SYMBOL, ")");
+
+        eat(whileStatement, JackTokenizer.TokenType.SYMBOL, "{");
+
+        Element statements = eat(whileStatement, "statements");
+
+        while(!jackTokenizer.stringVal().equals("}")) {
+            proceedNextTokens(statements);
+        }
+
+        eat(whileStatement, JackTokenizer.TokenType.SYMBOL, "}");
 
     }
 
@@ -286,7 +345,29 @@ public class CompileEngine {
         compileExpression(letStatement, ";");
     }
 
-    private void compileDo() {
+    private void compileDo(Element parent) {
+        Element doStatement = eat(parent, "doStatement");
+        eat(doStatement, JackTokenizer.TokenType.KEYWORD, "do");
+        eat(doStatement, JackTokenizer.TokenType.IDENTIFIER, null);
+        try {
+            eat(doStatement, JackTokenizer.TokenType.SYMBOL, ".");
+            eat(doStatement, JackTokenizer.TokenType.IDENTIFIER, null);
+        } catch (Exception e) {
+            // Ignore
+        }
+        eat(doStatement, JackTokenizer.TokenType.SYMBOL, "(");
+
+        Element expressionList = eat(doStatement, "expressionList");
+        while (!jackTokenizer.stringVal().equals(")")) {
+            compileExpression(expressionList, ",", ")");
+            if (jackTokenizer.stringVal().equals(",")) {
+                eat(expressionList, JackTokenizer.TokenType.SYMBOL, jackTokenizer.stringVal());
+            }
+        }
+
+        eat(doStatement, JackTokenizer.TokenType.SYMBOL, ")");
+        eat(doStatement, JackTokenizer.TokenType.SYMBOL, ";");
+
 
     }
 

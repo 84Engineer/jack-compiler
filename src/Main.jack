@@ -12,21 +12,21 @@ class Main {
     field boolean bol;
 
     constructor Main new(int Ax, int Ay, int Asize) {
-       var String str;
-       var int ii;
+       //var String str;
+       //var int ii;
 
-       let ii = 100;
+       //let ii = 100;
 
-       let x = Ax;
-       let y = Ay;
-       let z = x + y;
-       let bol = true;
+       //let x = Ax;
+       //let y = Ay;
+       //let z = x + y;
+       //let bol = true;
 
-       let str = "Hello!";
+       //let str = "Hello!";
 
 
        //let size = Asize;
-       //do draw();
+       do someType.draw(a, b);
        return this;
     }
 
@@ -34,7 +34,23 @@ class Main {
     function void main(int a, Array ar, boolean flag) {
         var char i;
         var Array v1, v2;
-//	    let i = 0;
-	    return i;
+	    let i = 0;
+	    return;
+    }
+
+    method char m1() {
+        while (x > 1) {
+            let y = y + 1;
+        }
+        return "a";
+    }
+
+    method void m2() {
+        if ((a + x) > 1) {
+            let y = y + 1;
+        } else {
+            let a = "hi there";
+        }
+        return;
     }
 }
