@@ -46,11 +46,18 @@ class Main {
     }
 
     method void m2() {
-        if ((a + x) > 1) {
+        if ((a + 2) > 1) {
             let y = y + 1;
         } else {
             let a = "hi there";
         }
+        return;
+    }
+
+    method void m3() {
+        let i = a[0];
+        let b[1] = Array.new(length);
+        let a[i] = Keyboard.readInt("ENTER THE NEXT NUMBER: ");
         return;
     }
 }

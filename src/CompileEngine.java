@@ -145,6 +145,31 @@ public class CompileEngine {
     private void compileIdentifier(Element parent) {
         Element term = eat(parent, "term");
         eat(term, JackTokenizer.TokenType.IDENTIFIER, null);
+        if (jackTokenizer.tokenType() == JackTokenizer.TokenType.SYMBOL) {
+            switch (jackTokenizer.stringVal()) {
+                case "[":
+                    eat(term, JackTokenizer.TokenType.SYMBOL, "[");
+                    compileExpression(term, "]");
+                    eat(term, JackTokenizer.TokenType.SYMBOL, "]");
+                    break;
+                case ".":
+                    eat(term, JackTokenizer.TokenType.SYMBOL, ".");
+                    eat(term, JackTokenizer.TokenType.IDENTIFIER, null);
+                    eat(term, JackTokenizer.TokenType.SYMBOL, "(");
+
+                    Element expressionList = eat(term, "expressionList");
+                    while (!jackTokenizer.stringVal().equals(")")) {
+                        compileExpression(expressionList, ",", ")");
+                        if (jackTokenizer.stringVal().equals(",")) {
+                            eat(expressionList, JackTokenizer.TokenType.SYMBOL, jackTokenizer.stringVal());
+                        }
+                    }
+                    eat(term, JackTokenizer.TokenType.SYMBOL, ")");
+                    break;
+                case "(":
+                    break;
+            }
+        }
     }
 
     private void compileThis(Element parent) {
@@ -286,18 +311,18 @@ public class CompileEngine {
 
     }
 
-    private void compileExpression(Element parent, String... endsWith0) {
+    private void compileExpression(Element parent, String... endsWith) {
         Element expression = eat(parent, "expression");
-        int parenthesesCount = 0;
-        String value = jackTokenizer.stringVal();
-        while (!Arrays.asList(endsWith0).contains(value)
-                || (value.equals("}") && Arrays.asList(endsWith0).contains(value) && parenthesesCount > 0)) {
-            if (value.equals("(")) {
-                parenthesesCount++;
-            } else if (value.equals(")") && parenthesesCount > 0) {
-                parenthesesCount--;
+        while (!Arrays.asList(endsWith).contains(jackTokenizer.stringVal())) {
+            if (jackTokenizer.stringVal().equals("(")) {
+                Element term = eat(expression, "term");
+                eat(term, JackTokenizer.TokenType.SYMBOL, "(");
+                compileExpression(term, ")");
             }
             proceedNextTokens(expression);
+        }
+        if (parent.getTagName().equals("term") && jackTokenizer.stringVal().equals(")")) {
+            eat(parent, JackTokenizer.TokenType.SYMBOL, jackTokenizer.stringVal());
         }
     }
 
@@ -341,6 +366,11 @@ public class CompileEngine {
         Element letStatement = eat(parent, "letStatement");
         eat(letStatement, JackTokenizer.TokenType.KEYWORD, "let");
         eat(letStatement, JackTokenizer.TokenType.IDENTIFIER, null);
+        if (jackTokenizer.stringVal().equals("[")) {
+            eat(letStatement, JackTokenizer.TokenType.SYMBOL, "[");
+            compileExpression(letStatement, "]");
+            eat(letStatement, JackTokenizer.TokenType.SYMBOL, "]");
+        }
         eat(letStatement, JackTokenizer.TokenType.SYMBOL, "=");
         compileExpression(letStatement, ";");
     }

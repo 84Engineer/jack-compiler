@@ -114,7 +114,7 @@
     <symbol>(</symbol>
     <identifier>a</identifier>
     <symbol>+</symbol>
-    <identifier>x</identifier>
+    <integerConstant>2</integerConstant>
     <symbol>)</symbol>
     <symbol>&gt;</symbol>
     <integerConstant>1</integerConstant>
@@ -136,6 +136,36 @@
     <stringConstant>hi there</stringConstant>
     <symbol>;</symbol>
     <symbol>}</symbol>
+    <keyword>return</keyword>
+    <symbol>;</symbol>
+    <symbol>}</symbol>
+    <keyword>method</keyword>
+    <keyword>void</keyword>
+    <identifier>m3</identifier>
+    <symbol>(</symbol>
+    <symbol>)</symbol>
+    <symbol>{</symbol>
+    <keyword>let</keyword>
+    <identifier>i</identifier>
+    <symbol>=</symbol>
+    <identifier>a</identifier>
+    <symbol>[</symbol>
+    <integerConstant>0</integerConstant>
+    <symbol>]</symbol>
+    <symbol>;</symbol>
+    <keyword>let</keyword>
+    <identifier>b</identifier>
+    <symbol>[</symbol>
+    <integerConstant>1</integerConstant>
+    <symbol>]</symbol>
+    <symbol>=</symbol>
+    <identifier>Array</identifier>
+    <symbol>.</symbol>
+    <identifier>new</identifier>
+    <symbol>(</symbol>
+    <identifier>length</identifier>
+    <symbol>)</symbol>
+    <symbol>;</symbol>
     <keyword>return</keyword>
     <symbol>;</symbol>
     <symbol>}</symbol>

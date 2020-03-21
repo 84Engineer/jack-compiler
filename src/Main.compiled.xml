@@ -201,7 +201,17 @@
                     <symbol>(</symbol>
                     <expression>
                         <term>
-                            <identifier>x</identifier>
+                            <symbol>(</symbol>
+                            <expression>
+                                <term>
+                                    <identifier>a</identifier>
+                                </term>
+                                <symbol>+</symbol>
+                                <term>
+                                    <integerconstant>2</integerconstant>
+                                </term>
+                            </expression>
+                            <symbol>)</symbol>
                         </term>
                         <symbol>&gt;</symbol>
                         <term>
@@ -245,6 +255,100 @@
                     </statements>
                     <symbol>}</symbol>
                 </ifStatement>
+                <returnStatement>
+                    <keyword>return</keyword>
+                    <symbol>;</symbol>
+                </returnStatement>
+            </statements>
+            <symbol>}</symbol>
+        </subroutineBody>
+    </subroutineDec>
+    <subroutineDec>
+        <keyword>method</keyword>
+        <keyword>void</keyword>
+        <identifier>m3</identifier>
+        <symbol>(</symbol>
+        <parameterList></parameterList>
+        <symbol>)</symbol>
+        <subroutineBody>
+            <symbol>{</symbol>
+            <statements>
+                <letStatement>
+                    <keyword>let</keyword>
+                    <identifier>i</identifier>
+                    <symbol>=</symbol>
+                    <expression>
+                        <term>
+                            <identifier>a</identifier>
+                            <symbol>[</symbol>
+                            <expression>
+                                <term>
+                                    <integerconstant>0</integerconstant>
+                                </term>
+                            </expression>
+                            <symbol>]</symbol>
+                        </term>
+                    </expression>
+                </letStatement>
+                <symbol>;</symbol>
+                <letStatement>
+                    <keyword>let</keyword>
+                    <identifier>b</identifier>
+                    <symbol>[</symbol>
+                    <expression>
+                        <term>
+                            <integerconstant>1</integerconstant>
+                        </term>
+                    </expression>
+                    <symbol>]</symbol>
+                    <symbol>=</symbol>
+                    <expression>
+                        <term>
+                            <identifier>Array</identifier>
+                            <symbol>.</symbol>
+                            <identifier>new</identifier>
+                            <symbol>(</symbol>
+                            <expressionList>
+                                <expression>
+                                    <term>
+                                        <identifier>length</identifier>
+                                    </term>
+                                </expression>
+                            </expressionList>
+                            <symbol>)</symbol>
+                        </term>
+                    </expression>
+                </letStatement>
+                <symbol>;</symbol>
+                <letStatement>
+                    <keyword>let</keyword>
+                    <identifier>a</identifier>
+                    <symbol>[</symbol>
+                    <expression>
+                        <term>
+                            <identifier>i</identifier>
+                        </term>
+                    </expression>
+                    <symbol>]</symbol>
+                    <symbol>=</symbol>
+                    <expression>
+                        <term>
+                            <identifier>Keyboard</identifier>
+                            <symbol>.</symbol>
+                            <identifier>readInt</identifier>
+                            <symbol>(</symbol>
+                            <expressionList>
+                                <expression>
+                                    <term>
+                                        <stringconstant>ENTER THE NEXT NUMBER: </stringconstant>
+                                    </term>
+                                </expression>
+                            </expressionList>
+                            <symbol>)</symbol>
+                        </term>
+                    </expression>
+                </letStatement>
+                <symbol>;</symbol>
                 <returnStatement>
                     <keyword>return</keyword>
                     <symbol>;</symbol>
