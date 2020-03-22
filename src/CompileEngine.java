@@ -10,9 +10,9 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class CompileEngine {
 
@@ -23,7 +23,7 @@ public class CompileEngine {
     public CompileEngine(JackTokenizer jackTokenizer, String filePath) {
         this.jackTokenizer = jackTokenizer;
         String[] parts = filePath.split("\\.");
-        this.filePath = parts[0] + ".compiled.xml";
+        this.filePath = parts[0] + ".xml";
     }
 
     public void compile() {
@@ -45,11 +45,13 @@ public class CompileEngine {
                 tr.setOutputProperty(OutputKeys.METHOD, "html");
                 tr.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
                 tr.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-                tr.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+                tr.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
                 // send DOM to file
                 tr.transform(new DOMSource(dom),
                         new StreamResult(new FileOutputStream(filePath)));
+
+//                removeEmptyLines();
 
             } catch (TransformerException | IOException te) {
                 System.out.println(te.getMessage());
@@ -102,6 +104,10 @@ public class CompileEngine {
                         case "true":
                         case "false":
                             compileBoolean(parent);
+                            break;
+                        case "null":
+                            compileNull(parent);
+                            break;
 
 
                     }
@@ -125,6 +131,11 @@ public class CompileEngine {
 //            }
 
 //        }
+    }
+
+    private void compileNull(Element parent) {
+        Element term = eat(parent, "term");
+        eat(term, JackTokenizer.TokenType.KEYWORD, null);
     }
 
     private void compileBoolean(Element parent) {
@@ -241,13 +252,22 @@ public class CompileEngine {
 
         eat(bodyTag, JackTokenizer.TokenType.SYMBOL, "{");
 
-        Element statements = eat(bodyTag, "statements");
+//        Element statements = eat(bodyTag, "statements");
+
+        Element currentElement = bodyTag;
+
+        boolean trigger = false;
 
         while (!jackTokenizer.stringVal().equals("return")) {
-            proceedNextTokens(statements);
+            if (!jackTokenizer.stringVal().equals("var") && !trigger) {
+                currentElement = eat(bodyTag, "statements");
+                trigger = true;
+            }
+
+            proceedNextTokens(currentElement);
         }
 
-        compileReturn(statements);
+        compileReturn(currentElement);
 
         eat(bodyTag, JackTokenizer.TokenType.SYMBOL, "}");
 
@@ -321,9 +341,9 @@ public class CompileEngine {
             }
             proceedNextTokens(expression);
         }
-        if (parent.getTagName().equals("term") && jackTokenizer.stringVal().equals(")")) {
-            eat(parent, JackTokenizer.TokenType.SYMBOL, jackTokenizer.stringVal());
-        }
+//        if (parent.getTagName().equals("term") && jackTokenizer.stringVal().equals(")")) {
+//            eat(parent, JackTokenizer.TokenType.SYMBOL, jackTokenizer.stringVal());
+//        }
     }
 
     private void compileReturn(Element parent) {
@@ -373,6 +393,7 @@ public class CompileEngine {
         }
         eat(letStatement, JackTokenizer.TokenType.SYMBOL, "=");
         compileExpression(letStatement, ";");
+        eat(letStatement, JackTokenizer.TokenType.SYMBOL, ";");
     }
 
     private void compileDo(Element parent) {
@@ -443,15 +464,42 @@ public class CompileEngine {
 
     private Element eat(Element parent, String tag) {
         Element element = dom.createElement(tag);
+//        if (tag.equals("expressionList") || tag.equals("parameterList")) {
+//            element.setTextContent("\n");
+//        }
         parent.appendChild(element);
         return element;
     }
 
     private Element writeToXml(Element parent, String value, JackTokenizer.TokenType type) {
-        Element element = dom.createElement(type.toString().toLowerCase());
-        element.setTextContent(value);
+        Element element = dom.createElement(type.getTag());
+        element.setTextContent(" " + value + " ");
         parent.appendChild(element);
         return element;
+    }
+
+    private void removeEmptyLines() throws FileNotFoundException {
+        Scanner file = null;
+        PrintWriter writer = null;
+
+        try {
+
+            file = new Scanner(new File(filePath + 1));
+            writer = new PrintWriter(filePath);
+
+            while (file.hasNext()) {
+                String line = file.nextLine();
+                if (!line.isEmpty()) {
+                    writer.write(line);
+                    writer.write("\n");
+                }
+            }
+        }
+            finally {
+
+            file.close();
+            writer.close();
+        }
     }
 
 

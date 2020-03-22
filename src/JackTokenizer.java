@@ -9,7 +9,19 @@ public class JackTokenizer {
     private int length;
 
     public enum TokenType {
-        KEYWORD, SYMBOL, IDENTIFIER, INTEGERCONSTANT, STRINGCONSTANT
+
+        KEYWORD("keyword"), SYMBOL("symbol"), IDENTIFIER("identifier"),
+        INTEGERCONSTANT("integerConstant"), STRINGCONSTANT("stringConstant");
+
+        private String tag;
+
+        private TokenType(String tag) {
+            this.tag = tag;
+        }
+
+        public String getTag() {
+            return tag;
+        }
     }
 
     public JackTokenizer(Document source) {
@@ -61,6 +73,10 @@ public class JackTokenizer {
 
     private String getValue() {
         return tokens.item(currentToken).getTextContent();
+    }
+
+    private String getPrevValue() {
+        return tokens.item(currentToken - 1).getTextContent();
     }
 
 }
