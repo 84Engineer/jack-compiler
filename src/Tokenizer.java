@@ -31,7 +31,7 @@ public class Tokenizer {
     public Tokenizer(List<String> input, String filePath) throws IOException {
         this.input = input;
         String[] parts = filePath.split("\\.");
-        this.filePath = parts[0] + "T.xml";
+        this.filePath = parts[0] + "tokens.xml";
     }
 
     public Document process() {

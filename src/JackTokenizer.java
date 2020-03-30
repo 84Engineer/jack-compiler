@@ -51,6 +51,10 @@ public class JackTokenizer {
         return TokenType.valueOf(tokens.item(currentToken).getNodeName().toUpperCase());
     }
 
+    public TokenType prevTokenType() {
+        return TokenType.valueOf(tokens.item(currentToken - 1).getNodeName().toUpperCase());
+    }
+
     public String keyWord() {
         return getValue();
     }
@@ -75,7 +79,7 @@ public class JackTokenizer {
         return tokens.item(currentToken).getTextContent();
     }
 
-    private String getPrevValue() {
+    public String getPrevValue() {
         return tokens.item(currentToken - 1).getTextContent();
     }
 

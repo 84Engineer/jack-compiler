@@ -23,7 +23,7 @@ public class CompileEngine {
     public CompileEngine(JackTokenizer jackTokenizer, String filePath) {
         this.jackTokenizer = jackTokenizer;
         String[] parts = filePath.split("\\.");
-        this.filePath = parts[0] + ".xml";
+        this.filePath = parts[0] + ".compiled.xml";
     }
 
     public void compile() {
@@ -47,9 +47,16 @@ public class CompileEngine {
                 tr.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
                 tr.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
+                StringWriter stringWriter = new StringWriter();
+
                 // send DOM to file
                 tr.transform(new DOMSource(dom),
-                        new StreamResult(new FileOutputStream(filePath)));
+//                        new StreamResult(new FileOutputStream(filePath)));
+                        new StreamResult(stringWriter));
+
+                try (PrintWriter out = new PrintWriter(filePath)) {
+                    out.println(stringWriter.getBuffer().toString().replaceAll("\n\n", "\n").trim());
+                }
 
 //                removeEmptyLines();
 
@@ -113,7 +120,16 @@ public class CompileEngine {
                     }
                     break;
                 case SYMBOL:
-                    compileSymbol(parent);
+//                    System.out.println(jackTokenizer.stringVal());
+                    switch (jackTokenizer.stringVal()) {
+                        case "-":
+                        case "~":
+                            compileUnary(parent);
+                            break;
+                        default:
+                            compileSymbol(parent);
+                            break;
+                    }
                     break;
                 case IDENTIFIER:
                     compileIdentifier(parent);
@@ -190,6 +206,21 @@ public class CompileEngine {
 
     private void compileSymbol(Element parent) {
         eat(parent, JackTokenizer.TokenType.SYMBOL, null);
+    }
+
+    private void compileUnary(Element parent) {
+        JackTokenizer.TokenType prevTokenType = jackTokenizer.prevTokenType();
+        String prevValue = jackTokenizer.getPrevValue();
+        if (prevTokenType != JackTokenizer.TokenType.IDENTIFIER
+                && prevTokenType != JackTokenizer.TokenType.STRINGCONSTANT
+                && prevTokenType != JackTokenizer.TokenType.INTEGERCONSTANT
+                && !prevValue.equals("]") && !prevValue.equals("true") && !prevValue.equals("false")) {
+            Element term = eat(parent, "term");
+            eat(term, JackTokenizer.TokenType.SYMBOL, null);
+            proceedNextTokens(term);
+        } else {
+            compileSymbol(parent);
+        }
     }
 
     private void compileClass(Element clazz) {
@@ -338,6 +369,7 @@ public class CompileEngine {
                 Element term = eat(expression, "term");
                 eat(term, JackTokenizer.TokenType.SYMBOL, "(");
                 compileExpression(term, ")");
+//                eat(term, JackTokenizer.TokenType.SYMBOL, ")");
             }
             proceedNextTokens(expression);
         }
@@ -464,9 +496,9 @@ public class CompileEngine {
 
     private Element eat(Element parent, String tag) {
         Element element = dom.createElement(tag);
-//        if (tag.equals("expressionList") || tag.equals("parameterList")) {
-//            element.setTextContent("\n");
-//        }
+        if (tag.equals("expressionList") || tag.equals("parameterList")) {
+            element.setTextContent("\n");
+        }
         parent.appendChild(element);
         return element;
     }
@@ -477,30 +509,5 @@ public class CompileEngine {
         parent.appendChild(element);
         return element;
     }
-
-    private void removeEmptyLines() throws FileNotFoundException {
-        Scanner file = null;
-        PrintWriter writer = null;
-
-        try {
-
-            file = new Scanner(new File(filePath + 1));
-            writer = new PrintWriter(filePath);
-
-            while (file.hasNext()) {
-                String line = file.nextLine();
-                if (!line.isEmpty()) {
-                    writer.write(line);
-                    writer.write("\n");
-                }
-            }
-        }
-            finally {
-
-            file.close();
-            writer.close();
-        }
-    }
-
 
 }

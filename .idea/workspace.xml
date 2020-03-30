@@ -2,22 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4deea75-291f-4b77-93a3-a10b0bff170d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lang.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/CompileEngine$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/CompileEngine$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/CompileEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/CompileEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer$TokenType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer$TokenType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/JackTokenizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.compiled.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.jack" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Main.jack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.tokens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Main.xml1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/MainT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/MainT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/Tokenizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jack-compiler/project10.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jack-compiler/project10.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CompileEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompileEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JackTokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JackTokenizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.compiled.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.jack" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.jack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.tokens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.xml1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tokenizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tokenizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project10.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/project10.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VMTranslator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -89,7 +91,14 @@
       <workItem from="1584639089588" duration="9325000" />
       <workItem from="1584731403448" duration="9867000" />
       <workItem from="1584817523126" duration="13984000" />
-      <workItem from="1584871864466" duration="11547000" />
+      <workItem from="1584871864466" duration="16352000" />
+      <workItem from="1584966190933" duration="599000" />
+      <workItem from="1585077888148" duration="532000" />
+      <workItem from="1585164258942" duration="592000" />
+      <workItem from="1585343925966" duration="5676000" />
+      <workItem from="1585401194095" duration="1175000" />
+      <workItem from="1585564590482" duration="280000" />
+      <workItem from="1585569777772" duration="1422000" />
     </task>
     <servers />
   </component>
@@ -111,10 +120,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="373" y="53" width="676" height="687" key="#JackAnalyzer/67.27.1299.741@67.27.1299.741" timestamp="1582984548131" />
-    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584295216274">
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585570051045">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1584295216274" />
+    <state x="174" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1585570051045" />
     <state x="414" y="201" width="595" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582982443554">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -123,10 +132,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="524" y="115" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1583707574864" />
-    <state x="849" y="127" key="#xdebugger.evaluate" timestamp="1584833349440">
+    <state x="346" y="69" key="#xdebugger.evaluate" timestamp="1585599730838">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="849" y="127" key="#xdebugger.evaluate/67.27.1299.741@67.27.1299.741" timestamp="1584833349440" />
+    <state x="346" y="69" key="#xdebugger.evaluate/67.27.1299.741@67.27.1299.741" timestamp="1585599730838" />
     <state x="167" y="125" width="1099" height="543" key="DiffContextDialog" timestamp="1584822327239">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -135,42 +144,46 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1584879628102" />
-    <state width="1253" height="266" key="GridCell.Tab.0.bottom" timestamp="1584884983095">
+    <state width="1253" height="341" key="GridCell.Tab.0.bottom" timestamp="1585599610495">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="266" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584884983095" />
-    <state width="1253" height="266" key="GridCell.Tab.0.center" timestamp="1584884983094">
+    <state width="1253" height="341" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1585599610495" />
+    <state width="1253" height="341" key="GridCell.Tab.0.center" timestamp="1585599610493">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="266" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1584884983094" />
-    <state width="1253" height="266" key="GridCell.Tab.0.left" timestamp="1584884983093">
+    <state width="1253" height="341" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1585599610493" />
+    <state width="1253" height="341" key="GridCell.Tab.0.left" timestamp="1585599610492">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="266" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1584884983093" />
-    <state width="1253" height="266" key="GridCell.Tab.0.right" timestamp="1584884983094">
+    <state width="1253" height="341" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1585599610492" />
+    <state width="1253" height="341" key="GridCell.Tab.0.right" timestamp="1585599610494">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="266" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1584884983094" />
-    <state width="1253" height="284" key="GridCell.Tab.1.bottom" timestamp="1584872830867">
+    <state width="1253" height="341" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1585599610494" />
+    <state width="1253" height="341" key="GridCell.Tab.1.bottom" timestamp="1585599611121">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="284" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1584872830867" />
-    <state width="1253" height="284" key="GridCell.Tab.1.center" timestamp="1584872830864">
+    <state width="1253" height="341" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1585599611121" />
+    <state width="1253" height="341" key="GridCell.Tab.1.center" timestamp="1585599611120">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="284" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1584872830864" />
-    <state width="1253" height="284" key="GridCell.Tab.1.left" timestamp="1584872830863">
+    <state width="1253" height="341" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1585599611120" />
+    <state width="1253" height="341" key="GridCell.Tab.1.left" timestamp="1585599611119">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="284" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1584872830863" />
-    <state width="1253" height="284" key="GridCell.Tab.1.right" timestamp="1584872830866">
+    <state width="1253" height="341" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1585599611119" />
+    <state width="1253" height="341" key="GridCell.Tab.1.right" timestamp="1585599611121">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="284" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1584872830866" />
+    <state width="1253" height="341" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1585599611121" />
     <state x="488" y="89" width="446" height="615" key="RollbackChangesDialog" timestamp="1584822199338">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="488" y="89" width="446" height="615" key="RollbackChangesDialog/67.27.1299.741@67.27.1299.741" timestamp="1584822199338" />
+    <state width="649" height="371" key="XDebugger.FullValuePopup" timestamp="1584893985950">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="649" height="371" key="XDebugger.FullValuePopup/67.27.1299.741@67.27.1299.741" timestamp="1584893985950" />
     <state x="251" y="84" width="921" height="624" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1584553776938">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -179,6 +192,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="361" y="108" width="710" height="576" key="find.popup/67.27.1299.741@67.27.1299.741" timestamp="1584660874256" />
+    <state x="67" y="27" width="1289" height="741" key="new project wizard" timestamp="1585564869511">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="67" y="27" width="1289" height="741" key="new project wizard/67.27.1299.741@67.27.1299.741" timestamp="1585564869511" />
     <state x="380" y="175" key="run.anything.popup" timestamp="1583006514076">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -223,16 +240,29 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
-          <line>73</line>
+          <line>80</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <condition expression="jackTokenizer.getValue().equals(&quot;static&quot;)" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
-          <line>130</line>
+          <line>146</line>
           <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/CompileEngine.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jack_compiler$JackAnalyzer.ic" NAME="JackAnalyzer Coverage Results" MODIFIED="1585599597100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

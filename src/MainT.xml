@@ -1,447 +1,140 @@
 <tokens>
     <keyword>class</keyword>
-    <identifier>Square</identifier>
+    <identifier>Main</identifier>
     <symbol>{</symbol>
-    <keyword>field</keyword>
+    <keyword>function</keyword>
+    <keyword>void</keyword>
+    <identifier>main</identifier>
+    <symbol>(</symbol>
+    <symbol>)</symbol>
+    <symbol>{</symbol>
+    <keyword>var</keyword>
+    <identifier>Array</identifier>
+    <identifier>a</identifier>
+    <symbol>;</symbol>
+    <keyword>var</keyword>
     <keyword>int</keyword>
-    <identifier>x</identifier>
+    <identifier>length</identifier>
+    <symbol>;</symbol>
+    <keyword>var</keyword>
+    <keyword>int</keyword>
+    <identifier>i</identifier>
     <symbol>,</symbol>
-    <identifier>y</identifier>
+    <identifier>sum</identifier>
     <symbol>;</symbol>
-    <keyword>field</keyword>
-    <keyword>int</keyword>
-    <identifier>size</identifier>
+    <keyword>let</keyword>
+    <identifier>length</identifier>
+    <symbol>=</symbol>
+    <identifier>Keyboard</identifier>
+    <symbol>.</symbol>
+    <identifier>readInt</identifier>
+    <symbol>(</symbol>
+    <stringConstant>HOW MANY NUMBERS? </stringConstant>
+    <symbol>)</symbol>
     <symbol>;</symbol>
-    <keyword>constructor</keyword>
-    <identifier>Square</identifier>
+    <keyword>let</keyword>
+    <identifier>a</identifier>
+    <symbol>=</symbol>
+    <identifier>Array</identifier>
+    <symbol>.</symbol>
     <identifier>new</identifier>
     <symbol>(</symbol>
-    <keyword>int</keyword>
-    <identifier>Ax</identifier>
-    <symbol>,</symbol>
-    <keyword>int</keyword>
-    <identifier>Ay</identifier>
-    <symbol>,</symbol>
-    <keyword>int</keyword>
-    <identifier>Asize</identifier>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>let</keyword>
-    <identifier>x</identifier>
-    <symbol>=</symbol>
-    <identifier>Ax</identifier>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>y</identifier>
-    <symbol>=</symbol>
-    <identifier>Ay</identifier>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>size</identifier>
-    <symbol>=</symbol>
-    <identifier>Asize</identifier>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>draw</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>return</keyword>
-    <identifier>x</identifier>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>dispose</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>Memory</identifier>
-    <symbol>.</symbol>
-    <identifier>deAlloc</identifier>
-    <symbol>(</symbol>
-    <keyword>this</keyword>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>draw</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>erase</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>incSize</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>if</keyword>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>erase</identifier>
-    <symbol>(</symbol>
+    <identifier>length</identifier>
     <symbol>)</symbol>
     <symbol>;</symbol>
     <keyword>let</keyword>
-    <identifier>size</identifier>
+    <identifier>i</identifier>
     <symbol>=</symbol>
-    <identifier>size</identifier>
+    <integerConstant>0</integerConstant>
     <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>draw</identifier>
+    <keyword>while</keyword>
     <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>decSize</identifier>
-    <symbol>(</symbol>
+    <identifier>i</identifier>
+    <symbol>&lt;</symbol>
+    <identifier>length</identifier>
     <symbol>)</symbol>
     <symbol>{</symbol>
-    <keyword>if</keyword>
+    <keyword>let</keyword>
+    <identifier>a</identifier>
+    <symbol>[</symbol>
+    <identifier>i</identifier>
+    <symbol>]</symbol>
+    <symbol>=</symbol>
+    <identifier>Keyboard</identifier>
+    <symbol>.</symbol>
+    <identifier>readInt</identifier>
     <symbol>(</symbol>
-    <identifier>size</identifier>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>erase</identifier>
-    <symbol>(</symbol>
+    <stringConstant>ENTER THE NEXT NUMBER: </stringConstant>
     <symbol>)</symbol>
     <symbol>;</symbol>
     <keyword>let</keyword>
-    <identifier>size</identifier>
+    <identifier>i</identifier>
     <symbol>=</symbol>
-    <identifier>size</identifier>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>draw</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
+    <identifier>i</identifier>
+    <symbol>+</symbol>
+    <integerConstant>1</integerConstant>
     <symbol>;</symbol>
     <symbol>}</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>moveUp</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>if</keyword>
-    <symbol>(</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
+    <keyword>let</keyword>
+    <identifier>i</identifier>
+    <symbol>=</symbol>
+    <integerConstant>0</integerConstant>
     <symbol>;</symbol>
     <keyword>let</keyword>
-    <identifier>y</identifier>
+    <identifier>sum</identifier>
     <symbol>=</symbol>
-    <identifier>y</identifier>
+    <integerConstant>0</integerConstant>
     <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
+    <keyword>while</keyword>
     <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>moveDown</identifier>
-    <symbol>(</symbol>
+    <identifier>i</identifier>
+    <symbol>&lt;</symbol>
+    <identifier>length</identifier>
     <symbol>)</symbol>
     <symbol>{</symbol>
-    <keyword>if</keyword>
-    <symbol>(</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
+    <keyword>let</keyword>
+    <identifier>sum</identifier>
+    <symbol>=</symbol>
+    <identifier>sum</identifier>
+    <symbol>+</symbol>
+    <identifier>a</identifier>
+    <symbol>[</symbol>
+    <identifier>i</identifier>
+    <symbol>]</symbol>
     <symbol>;</symbol>
     <keyword>let</keyword>
-    <identifier>y</identifier>
+    <identifier>i</identifier>
     <symbol>=</symbol>
-    <identifier>y</identifier>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
+    <identifier>i</identifier>
+    <symbol>+</symbol>
+    <integerConstant>1</integerConstant>
     <symbol>;</symbol>
     <symbol>}</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>moveLeft</identifier>
-    <symbol>(</symbol>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>if</keyword>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
     <keyword>do</keyword>
-    <identifier>Screen</identifier>
+    <identifier>Output</identifier>
     <symbol>.</symbol>
-    <identifier>setColor</identifier>
+    <identifier>printString</identifier>
     <symbol>(</symbol>
-    <identifier>x</identifier>
+    <stringConstant>THE AVERAGE IS: </stringConstant>
     <symbol>)</symbol>
     <symbol>;</symbol>
     <keyword>do</keyword>
-    <identifier>Screen</identifier>
+    <identifier>Output</identifier>
     <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
+    <identifier>printInt</identifier>
     <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>x</identifier>
-    <symbol>=</symbol>
-    <identifier>x</identifier>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
+    <identifier>sum</identifier>
+    <symbol>/</symbol>
+    <identifier>length</identifier>
     <symbol>)</symbol>
     <symbol>;</symbol>
     <keyword>do</keyword>
-    <identifier>Screen</identifier>
+    <identifier>Output</identifier>
     <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>return</keyword>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
-    <keyword>method</keyword>
-    <keyword>void</keyword>
-    <identifier>moveRight</identifier>
+    <identifier>println</identifier>
     <symbol>(</symbol>
     <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>if</keyword>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>{</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
     <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>let</keyword>
-    <identifier>x</identifier>
-    <symbol>=</symbol>
-    <identifier>x</identifier>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>setColor</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <keyword>do</keyword>
-    <identifier>Screen</identifier>
-    <symbol>.</symbol>
-    <identifier>drawRectangle</identifier>
-    <symbol>(</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>,</symbol>
-    <identifier>x</identifier>
-    <symbol>,</symbol>
-    <identifier>y</identifier>
-    <symbol>)</symbol>
-    <symbol>;</symbol>
-    <symbol>}</symbol>
     <keyword>return</keyword>
     <symbol>;</symbol>
     <symbol>}</symbol>
