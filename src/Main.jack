@@ -7,9 +7,14 @@
 
 /** Computes the average of a sequence of integers. */
 class Main {
-    function void main() {
-        let i = i * (-j);
-        let j = j / (-2);
-        return;
-	}
+   method void moveDown() {
+      if ((y + size) < 254) {
+         do Screen.setColor(false);
+         do Screen.drawRectangle(x, y, x + size, y + 1);
+         let y = y + 2;
+         do Screen.setColor(true);
+         do Screen.drawRectangle(x, (y + size) - 1, x + size, y + size);
+      }
+      return;
+   }
 }

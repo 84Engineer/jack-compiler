@@ -209,18 +209,25 @@ public class CompileEngine {
     }
 
     private void compileUnary(Element parent) {
-        JackTokenizer.TokenType prevTokenType = jackTokenizer.prevTokenType();
-        String prevValue = jackTokenizer.getPrevValue();
-        if (prevTokenType != JackTokenizer.TokenType.IDENTIFIER
-                && prevTokenType != JackTokenizer.TokenType.STRINGCONSTANT
-                && prevTokenType != JackTokenizer.TokenType.INTEGERCONSTANT
-                && !prevValue.equals("]") && !prevValue.equals("true") && !prevValue.equals("false")) {
+//        JackTokenizer.TokenType prevTokenType = jackTokenizer.prevTokenType();
+//        String prevValue = jackTokenizer.getPrevValue();
+//        if (prevTokenType != JackTokenizer.TokenType.IDENTIFIER
+//                && prevTokenType != JackTokenizer.TokenType.STRINGCONSTANT
+//                && prevTokenType != JackTokenizer.TokenType.INTEGERCONSTANT
+//                && !prevValue.equals("]") && !prevValue.equals("true") && !prevValue.equals("false")) {
             Element term = eat(parent, "term");
             eat(term, JackTokenizer.TokenType.SYMBOL, null);
-            proceedNextTokens(term);
-        } else {
-            compileSymbol(parent);
-        }
+            if (jackTokenizer.stringVal().equals("(")) {
+                Element innerTerm = eat(term, "term");
+                eat(innerTerm, JackTokenizer.TokenType.SYMBOL, "(");
+                compileExpression(innerTerm, ")");
+                eat(innerTerm, JackTokenizer.TokenType.SYMBOL, ")");
+            } else {
+                proceedNextTokens(term);
+            }
+//        } else {
+//            compileSymbol(parent);
+//        }
     }
 
     private void compileClass(Element clazz) {
@@ -369,9 +376,13 @@ public class CompileEngine {
                 Element term = eat(expression, "term");
                 eat(term, JackTokenizer.TokenType.SYMBOL, "(");
                 compileExpression(term, ")");
-//                eat(term, JackTokenizer.TokenType.SYMBOL, ")");
+                eat(term, JackTokenizer.TokenType.SYMBOL, ")");
+//                return;
             }
-            proceedNextTokens(expression);
+            if (!Arrays.asList(endsWith).contains(jackTokenizer.stringVal())) {
+                proceedNextTokens(expression);
+            }
+
         }
 //        if (parent.getTagName().equals("term") && jackTokenizer.stringVal().equals(")")) {
 //            eat(parent, JackTokenizer.TokenType.SYMBOL, jackTokenizer.stringVal());
